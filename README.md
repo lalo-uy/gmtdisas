@@ -12,3 +12,10 @@ To install run make install
 Usage: gmtdisas [option] [<ihex_file>]
 For usage details call the program with the -h (or --help) option to print help:
   `gmtdisas -h`
+
+
+EJSM
+Added opiont for start point
+Added label.inc file for label subs and jumps
+Added _Data_xx: label to skip data bytes
+
