@@ -15,7 +15,10 @@ For usage details call the program with the -h (or --help) option to print help:
 
 
 EJSM
+
 Added opiont for start point
+
 Added label.inc file for label subs and jumps
+
 Added _Data_xx: label to skip data bytes
 
