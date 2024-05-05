@@ -103,7 +103,7 @@ Write_Code_Data (FILE *file, datablock *block) {
 
   fprintf (file, ";-----------------------------------------------"
                 "--------------------------------\n");
-  fprintf (file, ".org 0x%06X\n", block->start_add);
+  fprintf (file, ".org 0x%06X\n", add);
 
   while (cnt < block->size) {
 
@@ -113,11 +113,11 @@ Write_Code_Data (FILE *file, datablock *block) {
               wrno += fprintf (file, labelname);
               wrno += fprintf (file, ":\n");
             } 
-    while ( labelname[0] == '_' ) {
+    while ( labelname[0] == '_' ) {       /*  This need to be worked, hex dump  of the first 8 or 16 bytes */
 	for ( n=1; n<strlen(labelname); n++) 
 		if (labelname[n] == '_' ) break ;
         n = atoi(&labelname[n+1]);
-        wrno += fprintf (file, "             0x%02X Bytes\n", n);
+        wrno += fprintf (file, "             0x%02X Bytes        0x%04X\n", n, add);
 	cnt+=n;
 	add+=n;
         labelname[0]=0;
