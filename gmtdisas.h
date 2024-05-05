@@ -30,9 +30,13 @@ uint32_t prog_mode;
   #define PROG_MODE_VERBOSE	  	0x0001
   #define PROG_MODE_REL0  		  0x0002
   #define PROG_MODE_IONAME      0x0004
+  #define PROG_MODE_LABELS      0x0008
 
 ioreg *ioregtable;
 int   ioreg_cnt;
+
+ioreg *labelstable;
+int   labels_cnt;
 
 /*----------------------------------------------------------------------------*/
 /* Project source files */
