@@ -1,4 +1,4 @@
-; Labels HC12
+; Example Labels for HC12   
 .equ SUB_0000:		0x8590
 .equ Print_Baud:	0x875F
 .equ Print_Chn:		0x87D5
